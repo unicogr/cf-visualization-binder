@@ -1,0 +1,25 @@
+# Core dependencies
+numpy>=1.21.0
+scipy>=1.7.0
+matplotlib>=3.5.0
+pandas>=1.3.0
+
+# Jupyter and widgets
+ipywidgets>=8.0.0
+ipyvolume>=0.6.0
+voila>=0.4.0
+
+# Neuroimaging libraries
+nibabel>=3.2.0
+nilearn>=0.9.0
+neuropythy>=0.12.0
+
+# Additional dependencies
+pyyaml>=6.0
+pillow>=9.0.0
+
+# BrainSpace (if needed)
+brainspace>=0.1.0
+
+# For color palettes - adjust path as needed
+# If cfmap is a local package, we'll handle it separately
