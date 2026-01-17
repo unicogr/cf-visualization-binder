@@ -1,0 +1,6 @@
+{
+  "VoilaConfiguration": {
+    "show_tracebacks": true,
+    "log_level": "DEBUG"
+  }
+}
