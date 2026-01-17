@@ -1,14 +1,23 @@
 #!/bin/bash
+set -e
 
-# Enable ipywidgets extension
+echo "🔧 Setting up Jupyter extensions..."
+
+# Enable ipywidgets
 jupyter nbextension enable --py widgetsnbextension --sys-prefix
-jupyter labextension install @jupyter-widgets/jupyterlab-manager
 
 # Enable voila
 jupyter serverextension enable voila --sys-prefix
 
-# If you have FreeSurfer data, uncomment and adjust:
-# mkdir -p data/fs_subjects
-# wget -O data.zip YOUR_DATA_URL
-# unzip data.zip -d data/
-pip install -e .
+# Configure Voilà to show tracebacks
+mkdir -p ~/.jupyter
+cat > ~/.jupyter/jupyter_config.json << 'JSON'
+{
+  "VoilaConfiguration": {
+    "show_tracebacks": true,
+    "log_level": "DEBUG"
+  }
+}
+JSON
+
+echo "✅ Setup complete!"
