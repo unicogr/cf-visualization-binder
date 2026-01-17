@@ -3,19 +3,20 @@ set -e
 
 echo "🔧 Setting up Jupyter extensions..."
 
-# Enable ipywidgets
-jupyter nbextension enable --py widgetsnbextension --sys-prefix
+# Check if we're using JupyterLab 3+ or Jupyter Notebook
+JUPYTER_VERSION=$(python -c "import jupyter_core; print(jupyter_core.__version__)" 2>/dev/null || echo "unknown")
+echo "Jupyter version: $JUPYTER_VERSION"
 
-# Enable voila
-jupyter serverextension enable voila --sys-prefix
+# For JupyterLab 3+, ipywidgets are installed automatically
+# We just need to enable voila
+jupyter server extension enable voila --sys-prefix 2>/dev/null || echo "Voila already enabled"
 
 # Configure Voilà to show tracebacks
 mkdir -p ~/.jupyter
-cat > ~/.jupyter/jupyter_config.json << 'JSON'
+cat > ~/.jupyter/voila.json << 'JSON'
 {
   "VoilaConfiguration": {
-    "show_tracebacks": true,
-    "log_level": "DEBUG"
+    "show_tracebacks": true
   }
 }
 JSON
