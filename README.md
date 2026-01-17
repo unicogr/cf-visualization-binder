@@ -6,7 +6,7 @@ Interactive visualization of whole-brain connective field mapping results.
 
 Click the button below to launch the interactive visualization:
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/YOUR_USERNAME/cf-visualization-binder/main?urlpath=voila%2Frender%2FsurfCFviz.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/unicogr/cf-visualization-binder/main?urlpath=voila%2Frender%2FsurfCFviz.ipynb)
 
 ## Features
 
