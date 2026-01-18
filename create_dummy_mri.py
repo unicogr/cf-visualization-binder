@@ -5,7 +5,7 @@ import nibabel as nib
 import numpy as np
 from pathlib import Path
 
-BASE_DIR = Path("/media/ng281432/Crucial X6/UNICOG/LePetitePrince/cf-visualization-binder/data/output/fs_subjects")
+BASE_DIR = Path("xxxx/cf-visualization-binder/data/output/fs_subjects")
 
 print("Creating dummy MRI files...")
 
